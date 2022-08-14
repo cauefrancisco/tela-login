@@ -1,0 +1,27 @@
+<main class="container">
+  <mat-card class="login mt-5">
+    <h2 class="text-center">Login</h2>
+    <form [formGroup]="form">
+      <div class="row center">
+        <mat-form-field class="col" appearance="fill">
+          <mat-label>Login</mat-label>
+          <input matInput type="text" formControlName="login">
+        </mat-form-field>
+        <div class="100-wv"></div>
+        <mat-form-field class="col" appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div class="register text-center m-3">
+        <p>Ainda não possui uma conta?</p>
+        <a (click)="navigate('register')">Registre-se</a>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </form>
+  </mat-card>
+</main>
