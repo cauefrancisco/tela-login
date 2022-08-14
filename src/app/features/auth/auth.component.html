@@ -3,13 +3,13 @@
     <h2 class="text-center m-4">Entrar</h2>
     <form [formGroup]="form">
       <div class="row center">
-        <mat-form-field class="col" appearance="fill">
+        <mat-form-field class="col">
           <mat-label>Login</mat-label>
           <input matInput type="text" formControlName="login">
           <mat-error *ngIf="checkLoginError()">Login é obrigatório!</mat-error>
         </mat-form-field>
         <div class="100-wv"></div>
-        <mat-form-field class="col" appearance="fill">
+        <mat-form-field class="col">
           <mat-label>Senha</mat-label>
           <input matInput type="password" formControlName="password">
         </mat-form-field>
