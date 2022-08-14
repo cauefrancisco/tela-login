@@ -6,13 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
 import { AuthComponent } from './features/auth/auth.component';
-import { MaterialModule } from './shared/modules/material.module';
 import { RegisterComponent } from './features/register/register.component';
+import { MaterialModule } from './shared/modules/material.module';
 
 @NgModule({
   imports: [
-    BrowserModule,
     FormsModule,
+    BrowserModule,
     MaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -21,8 +21,8 @@ import { RegisterComponent } from './features/register/register.component';
   declarations: [
     AppComponent,
     AuthComponent,
-    PageNotFoundComponent,
     RegisterComponent,
+    PageNotFoundComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

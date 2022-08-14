@@ -1,1 +1,33 @@
-<p>register works!</p>
+<main class="container">
+  <mat-card class="login mt-5">
+    <h2 class="text-center">Login</h2>
+    <form [formGroup]="form">
+      <div class="row center">
+        <mat-form-field class="col" appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name">
+        </mat-form-field>
+        <mat-form-field class="col" appearance="fill">
+          <mat-label>Data de nascimento</mat-label>
+          <input matInput type="date" formControlName="dateOfBirth">
+        </mat-form-field>
+        <mat-form-field class="col" appearance="fill">
+          <mat-label>Login</mat-label>
+          <input matInput type="text" formControlName="login">
+        </mat-form-field>
+        <div class="100-wv"></div>
+        <mat-form-field class="col" appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div class="container">
+        <div class="col-md-12 text-center">
+          <button type="button" class="m-3 btn btn-light" (click)="navigate('auth')">Cancelar</button>
+          <button type="button" class="m-3 btn btn-primary" (click)="navigate('auth')">Concluir</button>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</main>

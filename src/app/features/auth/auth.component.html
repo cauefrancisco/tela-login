@@ -6,6 +6,7 @@
         <mat-form-field class="col" appearance="fill">
           <mat-label>Login</mat-label>
           <input matInput type="text" formControlName="login">
+          <mat-error *ngIf="checkLoginError()">Login é obrigatório!</mat-error>
         </mat-form-field>
         <div class="100-wv"></div>
         <mat-form-field class="col" appearance="fill">
