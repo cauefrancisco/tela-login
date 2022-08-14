@@ -8,6 +8,11 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 import { AuthComponent } from './features/auth/auth.component';
 import { RegisterComponent } from './features/register/register.component';
 import { MaterialModule } from './shared/modules/material.module';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
 
 @NgModule({
   imports: [
@@ -16,7 +21,11 @@ import { MaterialModule } from './shared/modules/material.module';
     MaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions())
   ],
   declarations: [
     AppComponent,

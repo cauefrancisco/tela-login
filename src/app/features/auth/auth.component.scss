@@ -1,9 +1,16 @@
 
+.main{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 a {
   cursor: pointer;
   font-weight: 500;
- 
+
 }
 .login{
   margin: 0 auto;
