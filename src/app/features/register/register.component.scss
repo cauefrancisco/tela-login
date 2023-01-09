@@ -15,9 +15,30 @@ a {
 .login{
   margin: 0 auto;
   max-width: 36%;
-  max-height: 60%;
 }
 
 .center {
   margin: 0 auto;
+}
+
+
+@media (max-width: 980px){
+  .login{
+    border: 1px solid red;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 760px){
+  .login{
+    border: 1px solid red;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px){
+  .login{
+    border: 1px solid red;
+    max-width: 100%;
+  }
 }

@@ -1,11 +1,11 @@
 <main class="container main">
   <mat-card class="login">
     <h1 class="text-center m-5">Entrar</h1>
-    <form [formGroup]="form">
+    <form [formGroup]="form" (submit)="onSubmit()">
       <div class="row center">
         <mat-form-field class="col">
-          <mat-label>Login</mat-label>
-          <input matInput type="text" formControlName="login">
+          <mat-label>E-mail</mat-label>
+          <input matInput type="email" placeholder="seu e-mail" formControlName="email">
           <mat-error *ngIf="checkLoginError()">Login é obrigatório!</mat-error>
         </mat-form-field>
         <div class="100-wv"></div>
@@ -21,7 +21,7 @@
       </div>
 
       <div class="col-md-12 text-center">
-        <button type="button" class="btn btn-primary">Confirmar</button>
+        <button type="submit" class="btn btn-primary">Confirmar</button>
       </div>
     </form>
   </mat-card>
