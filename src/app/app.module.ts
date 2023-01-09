@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
-import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getFunctions, provideFunctions } from '@angular/fire/functions';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,7 +14,6 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 import { AuthComponent } from './features/auth/auth.component';
 import { RegisterComponent } from './features/register/register.component';
 import { MaterialModule } from './shared/modules/material.module';
-
 @NgModule({
   imports: [
     FormsModule,
@@ -23,6 +22,7 @@ import { MaterialModule } from './shared/modules/material.module';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

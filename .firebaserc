@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "tela-login-8840e"
+  },
+  "targets": {
+    "tela-login-8840e": {
+      "hosting": {
+        "tela-login": [
+          "tela-login-8840e"
+        ]
+      }
+    }
   }
 }

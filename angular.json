@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "tela-login:build:production",
+            "firebaseProject": "tela-login-8840e",
+            "firebaseHostingSite": "tela-login-8840e"
+          }
         }
       }
     }
